@@ -7,8 +7,9 @@ Rails.application.routes.draw do
 
   root 'pages#homepage'
   get 'about',  to: 'pages#about'
-   
- 
+  get 'signup',  to: 'users#new' 
+  resources :users, except: [:new]
+  #post 'users', to: 'users#create' <-- one way to tell the post
   resources :articles
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
