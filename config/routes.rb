@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   
   #post 'users', to: 'users#create' <-- one way to tell the post
   resources :articles
+  resources :categories, except: [:destroy]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
